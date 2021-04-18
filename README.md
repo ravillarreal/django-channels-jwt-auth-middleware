@@ -1,6 +1,6 @@
 # django-channels-jwt-auth-middleware
 
-Custom AuthMiddlewareStack to get users from JWT token for Django Channels.
+This is a fork of django-channels-jwt-auth-middleware for supporting python >=3.6
 
 ## Installation
 
