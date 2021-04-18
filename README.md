@@ -82,7 +82,7 @@ class TestConsumer(WebsocketConsumer):
             'message': 'testing consumer',
         }
         user = self.scope['user']
-        if (user_id := user.id):
+        if (user.id):
             context.update({'user': str(user_id)})
         else:
             context.update({'user': None})

@@ -19,7 +19,7 @@ class UserSerializer(ModelSerializer):
         )
 
     def get_profile_image(self, obj):
-        if (profile_image := obj.profile_image):
+        if (obj.profile_image):
             return profile_image.url
         else:
             return None
