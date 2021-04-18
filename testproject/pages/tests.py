@@ -28,7 +28,7 @@ class TestConsumer(WebsocketConsumer):
         }
         user = self.scope['user']
         if (user.id):
-            context.update({'user': str(user_id)})
+            context.update({'user': str(user.id)})
         else:
             context.update({'user': None})
         self.send(text_data=json.dumps(context))

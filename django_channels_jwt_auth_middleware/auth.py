@@ -21,7 +21,8 @@ class JWTAuthMiddleware:
     async def __call__(self, scope, receive, send):
         close_old_connections()
         try:
-            if(parse_qs(scope["query_string"].decode("utf8")).get('token', None)):
+            jwt_token = parse_qs(scope["query_string"].decode("utf8")).get('token', None)
+            if(jwt_token):
                 jwt_token = jwt_token_list[0]
                 jwt_payload = self.get_payload(jwt_token)
                 user_credentials = self.get_user_credentials(jwt_payload)
