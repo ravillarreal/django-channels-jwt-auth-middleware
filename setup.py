@@ -21,7 +21,7 @@ setup(
     package_dir={
         'django_channels_jwt_auth_middleware': 'django_channels_jwt_auth_middleware'},
     include_package_data=True,
-    python_requires='>=3.8',
+    python_requires='>=3.6',
     install_requires=[
         'django>=3.1.0',
         'channels>=3.0.0',
